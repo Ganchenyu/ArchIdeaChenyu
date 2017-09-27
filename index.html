@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .selected
+      {
+        color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="item1" class="item">Hello World</P>
+    <p id="item2" class="item">Hello World 2</P>
+    <p class="item">Hello World 3</P>
+    <p class="item">Hello World 4</P>
+    <p id="button">Click meeee!</P>
+
+      <script type="text/javascript">
+        function doSomething(){
+        let items = document.getElementsByClassName("item");
+        for(let a of items)
+        {  a.classList.toggle('selected');}
+    //let item = document.getElementById("item1");
+    //    item[0].classList.toggle('selected');
+    //    item[1].classList.toggle('selected');
+    //    item[2].classList.toggle('selected');
+    //    item[3].classList.toggle('selected');
+      }
+      let button = document.getElementById("button");
+      button.addEventListener("click",doSomething)
+      </script>
+  </body>
+</html>
